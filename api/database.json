@@ -1,0 +1,196 @@
+{
+    "flowers": [
+        {
+            "id": 1,
+            "commonName": "Rose",
+            "color": "red"
+        },
+        {
+            "id": 2,
+            "commonName": "Peony",
+            "color": "pink"
+        },
+        {
+            "id": 3,
+            "commonName": "Daisy",
+            "color": "white"
+        },
+        {
+            "id": 4,
+            "commonName": "Iris",
+            "color": "purple"
+        },
+        {
+            "id": 5,
+            "commonName": "Hydrangea",
+            "color": "blue"
+        }
+    ],
+    "nurseries": [
+        {
+            "id": 1,
+            "name": "Bates Nursery"
+        },
+        {
+            "id": 2,
+            "name": "Hewitt Garden"
+        },
+        {
+            "id": 3,
+            "name": "Riverbend Nurseries"
+        },
+        {
+            "id": 4,
+            "name": "Creekside Garden Center"
+        },
+        {
+            "id": 5,
+            "name": "Calloway Landscaping"
+        }
+    ],
+    "nurseryFlowers": [
+        {
+            "id": 1,
+            "nurseryId": 1,
+            "flowerId": 1
+        },
+        {
+            "id": 2,
+            "nurseryId": 1,
+            "flowerId": 2
+        },
+        {
+            "id": 3,
+            "nurseryId": 2,
+            "flowerId": 3
+        },
+        {
+            "id": 4,
+            "nurseryId": 2,
+            "flowerId": 4
+        },
+        {
+            "id": 5,
+            "nurseryId": 3,
+            "flowerId": 5
+        },
+        {
+            "id": 6,
+            "nurseryId": 3,
+            "flowerId": 1
+        },
+        {
+            "id": 7,
+            "nurseryId": 4,
+            "flowerId": 2
+        },
+        {
+            "id": 8,
+            "nurseryId": 4,
+            "flowerId": 3
+        },
+        {
+            "id": 9,
+            "nurseryId": 5,
+            "flowerId": 4
+        },
+        {
+            "id": 10,
+            "nurseryId": 5,
+            "flowerId": 5
+        },
+        {
+            "id": 11,
+            "nurseryId": 1,
+            "flowerId": 5
+        }
+    ],
+    "retailers": [
+        {
+            "id": 1,
+            "name": "A Village of Flowers",
+            "city": "Nashville",
+            "state": "TN",
+            "address": "1712 21st Ave S",
+            "distributorId": 1
+        },
+        {
+            "id": 2,
+            "name": "Rose Hill Flowers",
+            "city": "Chattanooga",
+            "state": "TN",
+            "address": "4821 Trousdale Dr",
+            "distributorId": 3
+        },
+        {
+            "id": 3,
+            "name": "The White Orchid",
+            "city": "Nashville",
+            "state": "TN",
+            "address": "998 Davidson Dr",
+            "distributorId": 1
+        },
+        {
+            "id": 4,
+            "name": "Bloom Flowers",
+            "city": "Memphis",
+            "state": "TN",
+            "address": "2700 Belmont Blvd",
+            "distributorId": 3
+        },
+        {
+            "id": 5,
+            "name": "Emma's Flowers & Gifts",
+            "city": "Huntsville",
+            "state": "AL",
+            "address": "2410 West End Ave",
+            "distributorId": 2
+        }
+    ],
+    "distributors": [
+        {
+            "id": 1,
+            "name": "ACME"
+        },
+        {
+            "id": 2,
+            "name": "Holland"
+        },
+        {
+            "id": 3,
+            "name": "Buford Inc"
+        }
+    ],
+    "distributorNurseries": [
+        {
+            "id": 1,
+            "distributorId": 1,
+            "nurseryId": 1
+        },
+        {
+            "id": 2,
+            "distributorId": 1,
+            "nurseryId": 2
+        },
+        {
+            "id": 3,
+            "distributorId": 2,
+            "nurseryId": 4
+        },
+        {
+            "id": 4,
+            "distributorId": 2,
+            "nurseryId": 5
+        },
+        {
+            "id": 5,
+            "distributorId": 3,
+            "nurseryId": 1
+        },
+        {
+            "id": 6,
+            "distributorId": 3,
+            "nurseryId": 2
+        }
+    ]
+}
