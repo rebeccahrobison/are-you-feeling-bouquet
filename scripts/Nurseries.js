@@ -8,7 +8,7 @@ export const DistributorNurseries = async () => {
 }
 
 export const NurseryFlowers = async () => {
-    const response = await fetch("http://localhost:8088/nurseryFlowers")
+    const response = await fetch("http://localhost:8088/nurseryFlowers?_expand=nursery&_expand=flower")
     const nurseryFlowers = await response.json()
 
     return nurseryFlowers

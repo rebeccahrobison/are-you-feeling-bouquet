@@ -18,27 +18,28 @@ export const Retailers = async () => {
         return foundNurseries
     }
 
-    // find flowers that are used by a nursery
-    const getFlowers = (id) => {
-
+    // find flowers that are grown by a nursery
+    const getFlowers = async (nurseryId) => {
+        const foundFlowers = nurseryFlowers.filter((nursF) => nursF.nurseryId === nurseryId)
+        const flowersNameArray = foundFlowers.map(flower => {return flower.flower.commonName})
+        return flowersNameArray
     }
 
-    console.log(getNurseries(1))
-
     let retailersHTML = `<div id="retailers">`
-    
-    const divStringArray = retailers.map(
-        (retailer) => {
-            return `<div id="retailer">
-                <h2>${retailer.name}--${retailer.distributor.name}</h2>
-                <div class="sourceNurseries">${getNurseries(retailer.distributorId).map(nur => {
-                    return `<p>${nur.nursery.name}</p>`
-                }).join("")}</div>
-            </div>`
+
+    for (const retailer of retailers) {
+        retailersHTML += `<div id="retailer">
+            <h2>${retailer.name}--Distributor: ${retailer.distributor.name}</h2>`
+        for(const nursery of getNurseries(retailer.distributorId)) {
+            let flowersFound = await getFlowers(nursery.nurseryId)
+            retailersHTML += `<div class="sourceNurseries">${nursery.nursery.name} grows: <ul>`
+            for(const flower of flowersFound) {
+                retailersHTML += `<li>${flower}</li>`
+            }
+            retailersHTML += `</ul></div>`
         }
-    )
-
-    retailersHTML += divStringArray.join("")
-
-    return retailersHTML
+        retailersHTML+= `</div>`
+    }
+    
+    return (retailersHTML)
 }
